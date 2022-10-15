@@ -64,10 +64,29 @@
         // If this.head is null ? return null : else return this.head.value
         return this.head == null ? null : this.head.data
       }
+
+    /*
+      * Create a method that uses a while loop and a runner to return 
+      * a string containing all list values
+      */
+      display() {
+        // Start the runner at the head of the list
+        let runner = this.head
+        // Instantiate an array to hold the head.data value
+        let displayArr = []
+
+        // Use a while loop to iterate through unknow amount of nodes
+        while ( runner !== null ) {
+            displayArr.push(runner.data)
+            runner = runner.next
+        }
+        return displayArr
+      }
   }
   SLL1 = new SLL()
-  console.log(SLL1.addFront(18))
+  //console.log(SLL1.addFront(18))
   console.log(SLL1.addFront(12))
   console.log(SLL1.addFront(17))
-  console.log(SLL1.removeFront())
-  console.log(SLL1.front())
+  //console.log(SLL1.removeFront())
+  //console.log(SLL1.front())
+  console.log(SLL1.display())
